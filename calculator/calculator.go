@@ -1,22 +1,26 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 )
 
 var i, j int
 
 func add() int {
 	x := i + j
-	fmt.Println("Result:")
 	return x
 }
 
 func minus() {
-	fmt.Println("Result:")
+	fmt.Println("...")
 }
 
 func main() {
+	fmt.Println("Welcome to a Calculator App.")
+	input := bufio.NewScanner(os.Stdin)
+	input.Scan()
 	fmt.Scan(&i)
-	fmt.Println("Result:")
+	fmt.Println("i: &i")
 }
