@@ -9,11 +9,9 @@ import (
 	"strings"
 )
 
-const (
-	empty    byte = ' '
-	human    byte = 'X'
-	computer byte = 'O'
-)
+const empty byte = ' '
+const human byte = 'X'
+const computer byte = 'O'
 
 type difficulty int
 
@@ -22,6 +20,9 @@ const (
 	medium
 	hard
 )
+
+const colorRed = "\033[0;31m"
+const colorBlue = "\033[0;34m"
 
 var winningLines = [8][3]int{
 	{0, 1, 2}, {3, 4, 5}, {6, 7, 8},
@@ -59,7 +60,11 @@ func (b board) print() {
 			if cell == empty {
 				fmt.Print(row*3 + col + 1)
 			} else {
-				fmt.Printf("%c", cell)
+				color := colorRed
+				if cell == human {
+					color = colorBlue
+				}
+				fmt.Printf("%s%c\033[0m", color, cell)
 			}
 		}
 		fmt.Println()

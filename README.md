@@ -1,3 +1,13 @@
+# Calculator App 
+
+A classical calculator app which makes + - * /. 
+
+## Run
+
+```sh
+go calculator.go
+```
+
 # Tic-Tac-Toe
 
 A command-line Tic-Tac-Toe game written in Go. Play as X against the computer and choose a difficulty:
