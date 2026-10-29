@@ -1,12 +1,6 @@
 # Calculator App 
 
-A classical calculator app which makes + - * /. 
-
-## Run
-
-```sh
-go calculator.go
-```
+Comming sonn
 
 # Tic-Tac-Toe
 
